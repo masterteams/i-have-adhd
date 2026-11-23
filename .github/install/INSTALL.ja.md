@@ -120,7 +120,7 @@ rm ~/.claude/.i-have-adhd-always
 ### インストール
 
 ```bash
-codex plugin marketplace add masterteams/i-have-adhd --ref main
+codex plugin marketplace add masterteams/i-have-adhd --ref development
 codex plugin add i-have-adhd@i-have-adhd
 ```
 

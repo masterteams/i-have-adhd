@@ -120,7 +120,7 @@ Hook chỉ chạy khi tệp cờ tồn tại, vì vậy chỉ cài plugin sẽ k
 ### Cài đặt
 
 ```bash
-codex plugin marketplace add masterteams/i-have-adhd --ref main
+codex plugin marketplace add masterteams/i-have-adhd --ref development
 codex plugin add i-have-adhd@i-have-adhd
 ```
 

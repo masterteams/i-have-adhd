@@ -252,7 +252,7 @@ def _build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def main(argv: Optional[list[str]] = None) -> int:
+def development(argv: Optional[list[str]] = None) -> int:
     args = _build_parser().parse_args(argv)
     rubric = grader_rubric(args.rubric.read_text(encoding="utf-8"))
     cases = {case["id"]: case for case in run_evals.load_cases(args.cases)}

@@ -140,7 +140,7 @@ def run_scenario(args: argparse.Namespace) -> int:
     return 0
 
 
-def main() -> int:
+def development() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
     validate = commands.add_parser("validate")

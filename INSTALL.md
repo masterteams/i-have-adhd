@@ -140,7 +140,7 @@ claude plugin update i-have-adhd@i-have-adhd
 
 The first command refreshes the marketplace listing. The second updates the installed plugin. Restart Claude Code to load it.
 
-`claude plugin update` skips a plugin whose `version` has not changed. If you maintain a fork, bump `version` in `.claude-plugin/plugin.json` after you edit the rules.
+`claude plugin update` skips a plugin whose `version` has not changed. If you developmenttain a fork, bump `version` in `.claude-plugin/plugin.json` after you edit the rules.
 
 ### Uninstall
 
@@ -182,7 +182,7 @@ The hook only fires when the flag file exists, so installing the plugin changes 
 ### Install
 
 ```bash
-codex plugin marketplace add masterteams/i-have-adhd --ref main
+codex plugin marketplace add masterteams/i-have-adhd --ref development
 codex plugin add i-have-adhd@i-have-adhd
 ```
 

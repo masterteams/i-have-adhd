@@ -214,7 +214,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def main() -> None:
+def development() -> None:
     args = parse_args()
     validate_package_manifest()
     executable = shutil.which(args.runtime)
@@ -425,4 +425,4 @@ export default function (pi: ExtensionAPI) {
 
 
 if __name__ == "__main__":
-    main()
+    development()
