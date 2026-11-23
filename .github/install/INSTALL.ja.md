@@ -6,7 +6,7 @@
 ### インストール
 
 ```bash
-agy plugin install https://github.com/ayghri/i-have-adhd
+agy plugin install https://github.com/masterteams/i-have-adhd
 ```
 
 ### 確認
@@ -19,7 +19,7 @@ agy plugin list
 
 ```bash
 agy plugin uninstall i-have-adhd
-agy plugin install https://github.com/ayghri/i-have-adhd
+agy plugin install https://github.com/masterteams/i-have-adhd
 ```
 
 ### アンインストール
@@ -61,7 +61,7 @@ agy plugin uninstall i-have-adhd
 ### インストール
 
 ```bash
-claude plugin marketplace add ayghri/i-have-adhd
+claude plugin marketplace add masterteams/i-have-adhd
 claude plugin install i-have-adhd@i-have-adhd
 ```
 
@@ -120,7 +120,7 @@ rm ~/.claude/.i-have-adhd-always
 ### インストール
 
 ```bash
-codex plugin marketplace add ayghri/i-have-adhd --ref main
+codex plugin marketplace add masterteams/i-have-adhd --ref main
 codex plugin add i-have-adhd@i-have-adhd
 ```
 
@@ -181,7 +181,7 @@ Gemini CLI にはプラグインマーケットプレイスがないため、公
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/ayghri/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
+curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
   -o ~/.gemini/commands/i-have-adhd.toml
 ```
 
@@ -190,7 +190,7 @@ curl -fsSL https://raw.githubusercontent.com/ayghri/i-have-adhd/main/skills/i-ha
 ### インストール（拡張機能方式、常時有効）
 
 ```bash
-gemini extensions install https://github.com/ayghri/i-have-adhd
+gemini extensions install https://github.com/masterteams/i-have-adhd
 ```
 
 拡張機能が `GEMINI.md` を読み込み、そこから完全なスキルがインポートされるため、最初のメッセージからルールが適用されます。`git` のインストールが必要です。
@@ -228,14 +228,14 @@ Copilot は Agent Skills をネイティブに読み込むため、変換不要�
 ### インストール
 
 ```bash
-npx skills add ayghri/i-have-adhd -a github-copilot        # このプロジェクトのみ
-npx skills add ayghri/i-have-adhd -a github-copilot -g     # 全プロジェクト共通
+npx skills add masterteams/i-have-adhd -a github-copilot        # このプロジェクトのみ
+npx skills add masterteams/i-have-adhd -a github-copilot -g     # 全プロジェクト共通
 ```
 
 CLI を使わない場合は、Copilot がスキャンするいずれかのディレクトリにスキルフォルダーをコピーします：
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
+git clone https://github.com/masterteams/i-have-adhd
 mkdir -p ~/.copilot/skills
 cp -R i-have-adhd/skills/i-have-adhd ~/.copilot/skills/
 ```
@@ -267,7 +267,7 @@ npx skills remove i-have-adhd
 
 ### 有効化に関する注意
 
-Copilot は設定項目の `disable-model-invocation` に従います。Claude Code と同様に、スキルを明示的に呼び出すまでルールは適用されません（[#60](https://github.com/ayghri/i-have-adhd/pull/60) で検証済み）。
+Copilot は設定項目の `disable-model-invocation` に従います。Claude Code と同様に、スキルを明示的に呼び出すまでルールは適用されません（[#60](https://github.com/masterteams/i-have-adhd/pull/60) で検証済み）。
 
 ### 常時有効（任意）
 
@@ -300,7 +300,7 @@ Copilot は設定項目の `disable-model-invocation` に従います。Claude C
 ### インストール
 
 ```bash
-hermes skills install ayghri/i-have-adhd/skills/i-have-adhd
+hermes skills install masterteams/i-have-adhd/skills/i-have-adhd
 ```
 
 `/i-have-adhd` と入力します。スキルは `~/.hermes/skills/` にインストールされ、次回のセッション開始時からスラッシュコマンドとして利用可能になります。
@@ -308,9 +308,9 @@ hermes skills install ayghri/i-have-adhd/skills/i-have-adhd
 先に内容を確認したい場合は、このリポジトリをスキルソース（「tap」）として追加してから検索・インストールすることもできます：
 
 ```bash
-hermes skills tap add ayghri/i-have-adhd
+hermes skills tap add masterteams/i-have-adhd
 hermes skills search adhd
-hermes skills install ayghri/i-have-adhd/skills/i-have-adhd
+hermes skills install masterteams/i-have-adhd/skills/i-have-adhd
 ```
 
 ### 確認
@@ -331,7 +331,7 @@ hermes skills update i-have-adhd
 hermes skills uninstall i-have-adhd
 ```
 
-tap も削除する場合：`hermes skills tap remove ayghri/i-have-adhd`
+tap も削除する場合：`hermes skills tap remove masterteams/i-have-adhd`
 
 ### 常時有効（任意）
 
@@ -367,7 +367,7 @@ Kimi Code のセッションを開始し、以下の手順を実行します：
 
 1. `/plugins` を実行する。
 2. **Custom** を選択する。
-3. `https://github.com/ayghri/i-have-adhd` を貼り付けて `Enter` を押す。
+3. `https://github.com/masterteams/i-have-adhd` を貼り付けて `Enter` を押す。
 4. **Trust and install** を選択する。
 
 スラッシュコマンド `/skill:i-have-adhd` を使用することで、スキルを明示的に呼び出します。
@@ -392,7 +392,7 @@ Kimi Code セッション内で `/plugins` を実行し、**I Have ADHD** にカ
 すべてのプロジェクトで使用する場合：
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd ~/.config/opencode/vendor/i-have-adhd
+git clone https://github.com/masterteams/i-have-adhd ~/.config/opencode/vendor/i-have-adhd
 mkdir -p ~/.config/opencode/plugins
 cat > ~/.config/opencode/plugins/i-have-adhd.js <<'EOF'
 export { default } from '../vendor/i-have-adhd/.opencode/plugins/i-have-adhd.mjs';
@@ -456,7 +456,7 @@ Pi はこのリポジトリをネイティブパッケージとして認識し�
 ### インストール
 
 ```bash
-pi install https://github.com/ayghri/i-have-adhd
+pi install https://github.com/masterteams/i-have-adhd
 ```
 
 新しい Pi セッションを開始し、現在のセッションでADHDフレンドリー出力を切り替えます：
@@ -498,7 +498,7 @@ GitHub パッケージが一覧にあることを確認し、`/i-have-adhd` と�
 ### 更新
 
 ```bash
-pi update https://github.com/ayghri/i-have-adhd
+pi update https://github.com/masterteams/i-have-adhd
 ```
 
 または、`pi update --extensions` で固定されていない全 Pi パッケージを一括更新します。
@@ -506,7 +506,7 @@ pi update https://github.com/ayghri/i-have-adhd
 ### アンインストール
 
 ```bash
-pi remove https://github.com/ayghri/i-have-adhd
+pi remove https://github.com/masterteams/i-have-adhd
 ```
 
 ### 常時有効（任意）
@@ -552,7 +552,7 @@ Pi のエージェント設定ディレクトリに `~/.pi/agent/i-have-adhd.jso
 ### インストール
 
 ```bash
-omp plugin marketplace add ayghri/i-have-adhd
+omp plugin marketplace add masterteams/i-have-adhd
 omp plugin install --scope user i-have-adhd@i-have-adhd
 ```
 
@@ -581,7 +581,7 @@ omp plugin marketplace remove i-have-adhd
 ### インストール
 
 ```bash
-qwen extensions install ayghri/i-have-adhd
+qwen extensions install masterteams/i-have-adhd
 ```
 
 Qwen Code は GitHub の短縮記法に対応しており、このリポジトリをネイティブ拡張機能としてインストール可能です。拡張機能は `skills/` 配下のスキルを自動検出します。
@@ -626,7 +626,7 @@ Zed の Agent は Agent Skills をネイティブに読み込むため、変換�
 Agent Panel で Skills マネージャーを開き、**Create skill from URL**（コマンドパレットでは `agent: create skill from url`）を選択して、以下を貼り付けます：
 
 ```
-https://github.com/ayghri/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/masterteams/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
 ```
 
 全プロジェクト共通で使う場合は **User** スコープ、現在のプロジェクトのみなら **Project** スコープで保存します。その後、Agent Panel で `/i-have-adhd` と入力します。
@@ -634,7 +634,7 @@ https://github.com/ayghri/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
 ファイルシステムを直接使う場合は、リポジトリをクローンしてユーザースキルディレクトリにスキルフォルダーを配置：
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
+git clone https://github.com/masterteams/i-have-adhd
 mkdir -p ~/.agents/skills
 cp -R i-have-adhd/skills/i-have-adhd ~/.agents/skills/
 ```
@@ -684,10 +684,10 @@ agent-skills を読み込めるすべての環境で動作します。`-a <agent
 ### インストール
 
 ```bash
-npx skills add ayghri/i-have-adhd                  # このプロジェクトのみ
-npx skills add ayghri/i-have-adhd -g               # 全プロジェクト共通
-npx skills add ayghri/i-have-adhd -a cursor -y     # 特定のエージェントのみ
-npx skills add ayghri/i-have-adhd -a opencode -y
+npx skills add masterteams/i-have-adhd                  # このプロジェクトのみ
+npx skills add masterteams/i-have-adhd -g               # 全プロジェクト共通
+npx skills add masterteams/i-have-adhd -a cursor -y     # 特定のエージェントのみ
+npx skills add masterteams/i-have-adhd -a opencode -y
 ```
 
 新しいエージェントチャットで `/i-have-adhd` と入力します。
@@ -695,7 +695,7 @@ npx skills add ayghri/i-have-adhd -a opencode -y
 CLI を使わない場合は、エージェントがスキャンするパスにスキルフォルダーをコピー：
 
 ```bash
-git clone https://github.com/ayghri/i-have-adhd
+git clone https://github.com/masterteams/i-have-adhd
 mkdir -p ~/.cursor/skills     # Cursorの場合。OpenCodeなら .agents/skills、その他は各固有パス
 cp -R i-have-adhd/skills/i-have-adhd ~/.cursor/skills/
 ```
@@ -774,7 +774,7 @@ Claude Code、Qwen Code、Codex には中間状態がありません。有効化
 ```bash
 claude plugin uninstall i-have-adhd            # 先に本家のコピーを削除
 claude plugin marketplace remove i-have-adhd   # Fork版と本家で名前が重複するため
-claude plugin marketplace add <your-username>/i-have-adhd
+claude plugin marketplace add masterteams/i-have-adhd
 claude plugin install i-have-adhd@i-have-adhd
 ```
 

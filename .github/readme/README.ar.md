@@ -5,7 +5,7 @@
   <strong align="center">إجابات موجزة ومناسبة للمصابين باضطراب فرط الحركة وتشتت الانتباه. لا حاجة إلى تشخيص؛ يمكن للجميع استخدامها!</strong>
 </p>
 <p align="center">
-  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="الترخيص"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/masterteams/i-have-adhd?style=flat" alt="الترخيص"></a>
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 انسخ النص التالي والصقه في موجّه سطر الأوامر:
 
 ```text
-Install the i-have-adhd skill/plugin from https://github.com/ayghri/i-have-adhd, refer to the repo's AGENTS.md for instructions.
+Install the i-have-adhd skill/plugin from https://github.com/masterteams/i-have-adhd, refer to the repo's AGENTS.md for instructions.
 ```
 
 أو 🔗 [راجع تعليمات التثبيت](../install/INSTALL.ar.md).
@@ -85,7 +85,7 @@ Install the i-have-adhd skill/plugin from https://github.com/ayghri/i-have-adhd,
 ```bash
 claude plugin uninstall i-have-adhd            # إزالة النسخة الأصلية أولاً
 claude plugin marketplace remove i-have-adhd   # النسخة المتفرعة والأصلية تحملان الاسم نفسه
-claude plugin marketplace add <your-username>/i-have-adhd
+claude plugin marketplace add masterteams/i-have-adhd
 claude plugin install i-have-adhd@i-have-adhd
 ```
 

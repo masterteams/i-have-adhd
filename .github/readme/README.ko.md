@@ -5,7 +5,7 @@
   <strong align="center">ADHD 친화적인 출력. ADHD 진단은 필요 없어요!</strong>
 </p>
 <p align="center">
-  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="License"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/masterteams/i-have-adhd?style=flat" alt="License"></a>
 </p>
 
 <p align="center">
@@ -84,7 +84,7 @@
 ```bash
 claude plugin uninstall i-have-adhd            # 먼저 업스트림 버전 제거
 claude plugin marketplace remove i-have-adhd   # 포크와 업스트림이 같은 이름을 씁니다
-claude plugin marketplace add <your-username>/i-have-adhd
+claude plugin marketplace add masterteams/i-have-adhd
 claude plugin install i-have-adhd@i-have-adhd
 ```
 

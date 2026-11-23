@@ -5,7 +5,7 @@
   <strong align="center">ตอบได้ใจความ ไม่ยืดเยื้อ จะสมาธิสั้นหรือไม่ก็เข้าใจได้!</strong>
 </p>
 <p align="center">
-  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/ayghri/i-have-adhd?style=flat" alt="สัญญาอนุญาต"></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/github/license/masterteams/i-have-adhd?style=flat" alt="สัญญาอนุญาต"></a>
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 คัดลอกข้อความนี้ไปวางในพรอมต์ของ CLI:
 
 ```text
-Install the i-have-adhd skill/plugin from https://github.com/ayghri/i-have-adhd, refer to the repo's AGENTS.md for instructions.
+Install the i-have-adhd skill/plugin from https://github.com/masterteams/i-have-adhd, refer to the repo's AGENTS.md for instructions.
 ```
 
 หรือ 🔗 [ดูวิธีติดตั้ง](../../INSTALL.md) (ภาษาอังกฤษ)
@@ -86,7 +86,7 @@ Fork โปรเจกต์นี้ และแก้ไขไฟล์ `ski
 ```bash
 claude plugin uninstall i-have-adhd            # drop the upstream copy first:
 claude plugin marketplace remove i-have-adhd   # fork and upstream share both names
-claude plugin marketplace add <your-username>/i-have-adhd
+claude plugin marketplace add masterteams/i-have-adhd
 claude plugin install i-have-adhd@i-have-adhd
 ```
 
