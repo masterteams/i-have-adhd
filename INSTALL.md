@@ -1,5 +1,25 @@
 # How to install
 
+## Quick install with npx skills
+
+Install the canonical **skill** (not the full runtime plugin) for Codex:
+
+```bash
+npx skills add masterteams/i-have-adhd --skill i-have-adhd -a codex -g -y
+```
+
+For Claude Code, substitute `-a claude-code`. Omit `-g` to install only into the current project. The repository's default branch is `development`; no `main` ref is required.
+
+To use the tested Bash wrapper on Linux/macOS:
+
+```bash
+git clone --branch development https://github.com/masterteams/i-have-adhd.git
+bash i-have-adhd/scripts/install.sh --agent codex --global
+```
+
+From your own project directory, run the wrapper with `--project` instead of `--global` for project-local installation. Pass `-a codex -a claude-code` for both agents. The wrapper runs `npx skills`, does not install hooks, and requires Node.js/npm plus Git. For Claude Code hooks and always-on behavior, use the Claude Code plugin instructions below.
+
+
 <details>
 <summary><strong>Antigravity (<code>agy</code>)</strong></summary>
 
@@ -67,7 +87,7 @@ this skill. Check the exported instructions before enabling it.
 
 ### Install
 
-1. Download the [canonical SKILL.md](https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/SKILL.md) and save it as `SKILL.md`. Review its contents before uploading.
+1. Download the [canonical SKILL.md](https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/SKILL.md) and save it as `SKILL.md`. Review its contents before uploading.
 2. In AstronClaw, open **我的技能 (My skills)**, choose **新建 (New)**, and upload that `.md` file.
 3. Check that the imported skill is named `i-have-adhd`. Use **启用/禁用 (Enable/Disable)** to control its availability.
 
@@ -307,7 +327,7 @@ Gemini CLI has no plugin marketplace, so there are two native routes: a **custom
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
+curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/agents/gemini.toml \
   -o ~/.gemini/commands/i-have-adhd.toml
 ```
 
@@ -755,7 +775,7 @@ Zed's Agent reads Agent Skills natively using the same SKILL.md format without c
 In the Agent Panel, open the Skills manager and choose **Create skill from URL** (also in the command palette as `agent: create skill from url`), then paste:
 
 ```
-https://github.com/masterteams/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/masterteams/i-have-adhd/blob/development/skills/i-have-adhd/SKILL.md
 ```
 
 Save it in **User** scope for every project, or **Project** scope for one. Then type `/i-have-adhd` in the Agent Panel.

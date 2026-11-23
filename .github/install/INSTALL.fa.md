@@ -1,5 +1,25 @@
 # نحوه نصب
 
+## نصب سریع با npx skills
+
+برای نصب مستقیم Skill در Codex (سراسری برای کاربر):
+
+```bash
+npx skills add masterteams/i-have-adhd --skill i-have-adhd -a codex -g -y
+```
+
+برای Claude Code، گزینه `-a claude-code` را جایگزین کنید. برای نصب فقط در پروژه جاری، `-g` را حذف کنید. شاخه پیش‌فرض مخزن `development` است، نه `main`.
+
+اسکریپت نصب خودکار (Linux/macOS):
+
+```bash
+git clone --branch development https://github.com/masterteams/i-have-adhd.git
+bash i-have-adhd/scripts/install.sh --agent codex --global
+```
+
+برای نصب پروژه‌ای، اسکریپت را از پوشه پروژه مقصد با `--project` اجرا کنید؛ برای نصب همزمان روی Codex و Claude Code از `-a codex -a claude-code` استفاده کنید. `npx skills` فقط Skill را نصب می‌کند، نه Hookهای Plugin. برای Always-on و Hookهای Claude Code، راهنمای Plugin پایین همین صفحه را ببینید.
+
+
 <details>
 <summary><strong>Antigravity (<code>agy</code>)</strong></summary>
 
@@ -64,7 +84,7 @@ AstronClaw از وارد کردن فایل Markdown به عنوان یک مها�
 
 ### نصب
 
-1. فایل [SKILL.md اصلی](https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/SKILL.md) را دانلود کرده و با نام `SKILL.md` ذخیره کنید. قبل از بارگذاری، محتوای آن را مرور کنید.
+1. فایل [SKILL.md اصلی](https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/SKILL.md) را دانلود کرده و با نام `SKILL.md` ذخیره کنید. قبل از بارگذاری، محتوای آن را مرور کنید.
 2. در AstronClaw، بخش **我的技能 (My skills)** را باز کنید، **新建 (New)** را انتخاب کرده و آن فایل `.md` را بارگذاری کنید.
 3. مطمئن شوید نام مهارت واردشده `i-have-adhd` است. برای کنترل در دسترس بودن آن، از گزینه **启用/禁用 (Enable/Disable)** استفاده کنید.
 
@@ -221,7 +241,7 @@ Gemini CLI بازارچه (marketplace) پلاگین ندارد، بنابرای
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
+curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/agents/gemini.toml \
   -o ~/.gemini/commands/i-have-adhd.toml
 ```
 
@@ -663,7 +683,7 @@ qwen extensions uninstall i-have-adhd
 در پنل Agent، مدیر مهارت‌ها (Skills manager) را باز کرده و **Create skill from URL** (همچنین در پالت دستورات به عنوان `agent: create skill from url`) را انتخاب کنید، سپس آدرس زیر را پیست کنید:
 
 ```text
-https://github.com/masterteams/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/masterteams/i-have-adhd/blob/development/skills/i-have-adhd/SKILL.md
 ```
 
 آن را در محدوده **User** برای همه پروژه‌ها، یا در محدوده **Project** برای یک پروژه ذخیره کنید. سپس در پنل Agent دستور `/i-have-adhd` را تایپ کنید.

@@ -25,6 +25,17 @@
 
 ## Install
 
+### Quick install (skills CLI)
+
+For Codex (all projects):
+
+```bash
+npx skills add masterteams/i-have-adhd --skill i-have-adhd -a codex -g -y
+```
+
+For project-local installation, omit `-g`; for Claude Code use `-a claude-code`. This installs the skill only, not plugin hooks. For the Bash installer and all other runtimes, see [INSTALL.md](INSTALL.md).
+
+
 Copy/paste into your CLI prompt:
 
 ```text

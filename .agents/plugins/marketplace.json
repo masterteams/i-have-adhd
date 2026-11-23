@@ -9,7 +9,7 @@
       "source": {
         "source": "url",
         "url": "https://github.com/masterteams/i-have-adhd.git",
-        "ref": "main"
+        "ref": "development"
       },
       "policy": {
         "installation": "AVAILABLE",

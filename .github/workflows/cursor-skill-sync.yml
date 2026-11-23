@@ -10,7 +10,7 @@ on:
       - .cursor/skills/**
       - .github/workflows/cursor-skill-sync.yml
   push:
-    branches: [main]
+    branches: [development]
 
 jobs:
   check:

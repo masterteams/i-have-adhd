@@ -12,7 +12,7 @@ on:
       - tests/test_always_on_hooks.py
       - .github/workflows/plugin-load-check.yml
   push:
-    branches: [main]
+    branches: [development]
 
 jobs:
   hook-parity:

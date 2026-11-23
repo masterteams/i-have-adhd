@@ -9,7 +9,7 @@ on:
       - scripts/check_pi_extension.py
       - .github/workflows/pi-load-check.yml
   push:
-    branches: [main]
+    branches: [development]
 
 permissions:
   contents: read
