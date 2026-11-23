@@ -1,0 +1,23 @@
+name: skills CLI installer checks
+
+on:
+  pull_request:
+    paths:
+      - scripts/install.sh
+      - tests/test_install_script.py
+      - .github/workflows/install-script-check.yml
+  push:
+    branches: [development]
+
+permissions:
+  contents: read
+
+jobs:
+  installer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate shell syntax
+        run: bash -n scripts/install.sh
+      - name: Test installer with offline npx stub
+        run: python3 -m unittest tests.test_install_script -v
