@@ -181,7 +181,7 @@ Gemini CLI にはプラグインマーケットプレイスがないため、公
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
+curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/agents/gemini.toml \
   -o ~/.gemini/commands/i-have-adhd.toml
 ```
 
@@ -626,7 +626,7 @@ Zed の Agent は Agent Skills をネイティブに読み込むため、変換�
 Agent Panel で Skills マネージャーを開き、**Create skill from URL**（コマンドパレットでは `agent: create skill from url`）を選択して、以下を貼り付けます：
 
 ```
-https://github.com/masterteams/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/masterteams/i-have-adhd/blob/development/skills/i-have-adhd/SKILL.md
 ```
 
 全プロジェクト共通で使う場合は **User** スコープ、現在のプロジェクトのみなら **Project** スコープで保存します。その後、Agent Panel で `/i-have-adhd` と入力します。

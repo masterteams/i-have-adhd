@@ -180,7 +180,7 @@ Gemini CLI tidak memiliki marketplace plugin, jadi ada dua opsi bawaan: perintah
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
+curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/agents/gemini.toml \
   -o ~/.gemini/commands/i-have-adhd.toml
 ```
 
@@ -573,7 +573,7 @@ Zed Agent membaca Agent Skills secara native: menggunakan file `SKILL.md` yang s
 Di Agent Panel, buka pengelola Skills, pilih **Create skill from URL** (juga tersedia di palet sebagai `agent: create skill from url`) dan tempel:
 
 ```
-https://github.com/masterteams/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/masterteams/i-have-adhd/blob/development/skills/i-have-adhd/SKILL.md
 ```
 
 Simpan dengan cakupan **User** untuk semua proyek, atau **Project** untuk satu proyek tertentu. Setelah itu, ketik `/i-have-adhd` di Agent Panel.

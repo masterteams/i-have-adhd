@@ -66,7 +66,7 @@ AstronClaw 支持将 Markdown 文件导入为自定义技能。此方式使用�
 
 ### 安装
 
-1. 下载[技能源文件 SKILL.md](https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/SKILL.md)，保存为 `SKILL.md`，上传前先阅读文件内容。
+1. 下载[技能源文件 SKILL.md](https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/SKILL.md)，保存为 `SKILL.md`，上传前先阅读文件内容。
 2. 在 AstronClaw 中打开**我的技能**，选择**新建**，上传该 `.md` 文件。
 3. 确认导入后的技能名称为 `i-have-adhd`，通过**启用/禁用**控制技能是否可用。
 
@@ -234,7 +234,7 @@ Gemini CLI 没有插件市场，因此有两种原生方式：**自定义命令*
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
+curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/agents/gemini.toml \
   -o ~/.gemini/commands/i-have-adhd.toml
 ```
 
@@ -680,7 +680,7 @@ Zed 的 Agent 原生读取 Agent Skills：直接使用同一个 `SKILL.md`，无
 在 Agent Panel 中打开 Skills 管理器，选择 **Create skill from URL**（命令面板中为 `agent: create skill from url`），然后粘贴：
 
 ```
-https://github.com/masterteams/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/masterteams/i-have-adhd/blob/development/skills/i-have-adhd/SKILL.md
 ```
 
 要用于所有项目，请保存到 **User** 作用域；仅用于一个项目则保存到 **Project** 作用域。然后在 Agent Panel 中输入 `/i-have-adhd`。

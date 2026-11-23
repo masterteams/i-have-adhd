@@ -67,7 +67,7 @@ agy plugin uninstall i-have-adhd
 
 ### تثبيت
 
-1. قم بتنزيل [SKILL.md](https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/SKILL.md) الأساسي واحفظه باسم `SKILL.md`. قم بمراجعة محتوياته قبل التحميل.
+1. قم بتنزيل [SKILL.md](https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/SKILL.md) الأساسي واحفظه باسم `SKILL.md`. قم بمراجعة محتوياته قبل التحميل.
 2. في AstronClaw، افتح **我的技能 (مهاراتي)**، واختر **新建 (جديد)**، وقم بتحميل ملف `.md`.
 3. تأكد من تسمية المهارة المستوردة `i-have-adhd`. استخدم **启用/禁用 (تمكين/تعطيل)** للتحكم في مدى توفرها.
 
@@ -299,7 +299,7 @@ grok plugin uninstall i-have-adhd --confirm
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
+curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/agents/gemini.toml \
   -o ~/.gemini/commands/i-have-adhd.toml
 ```
 
@@ -747,7 +747,7 @@ qwen extensions uninstall i-have-adhd
 في لوحة الوكيل، افتح مدير المهارات واختر **إنشاء مهارة من عنوان URL** (أيضًا في لوحة الأوامر باسم `agent: create skill from url`)، ثم الصق:
 
 ```
-https://github.com/masterteams/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/masterteams/i-have-adhd/blob/development/skills/i-have-adhd/SKILL.md
 ```
 
 احفظها في نطاق **المستخدم** لجميع المشاريع، أو في نطاق **المشروع** لمشروع واحد. ثم اكتب `/i-have-adhd` في لوحة الوكيل.

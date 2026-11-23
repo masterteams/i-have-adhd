@@ -181,7 +181,7 @@ O Gemini CLI não tem marketplace de plugins, então há duas opções nativas: 
 
 ```bash
 mkdir -p ~/.gemini/commands
-curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/main/skills/i-have-adhd/agents/gemini.toml \
+curl -fsSL https://raw.githubusercontent.com/masterteams/i-have-adhd/development/skills/i-have-adhd/agents/gemini.toml \
   -o ~/.gemini/commands/i-have-adhd.toml
 ```
 
@@ -576,7 +576,7 @@ O Agent do Zed lê Agent Skills nativamente: usa o mesmo `SKILL.md`, sem convers
 No Agent Panel, abra o gerenciador de Skills, escolha **Create skill from URL** (também disponível na paleta como `agent: create skill from url`) e cole:
 
 ```
-https://github.com/masterteams/i-have-adhd/blob/main/skills/i-have-adhd/SKILL.md
+https://github.com/masterteams/i-have-adhd/blob/development/skills/i-have-adhd/SKILL.md
 ```
 
 Salve no escopo **User** para todos os projetos ou **Project** para apenas um. Depois, digite `/i-have-adhd` no Agent Panel.
