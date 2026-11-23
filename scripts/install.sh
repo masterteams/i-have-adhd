@@ -59,26 +59,26 @@ while (($#)); do
   esac
 done
 
-((\${#AGENTS[@]})) || AGENTS=(codex)
+((${#AGENTS[@]})) || AGENTS=(codex)
 # Deduplicate agents without changing order.
 UNIQUE=()
-for agent in "\${AGENTS[@]}"; do
+for agent in "${AGENTS[@]}"; do
   found=false
-  for existing in "\${UNIQUE[@]}"; do
+  for existing in "${UNIQUE[@]}"; do
     if [[ "$existing" == "$agent" ]]; then found=true; break; fi
   done
   if [[ "$found" == false ]]; then UNIQUE+=("$agent"); fi
 done
 
 cmd=(npx --yes skills add "$SOURCE" --skill "$SKILL")
-for agent in "\${UNIQUE[@]}"; do cmd+=(--agent "$agent"); done
+for agent in "${UNIQUE[@]}"; do cmd+=(--agent "$agent"); done
 [[ "$SCOPE" == global ]] && cmd+=(--global)
 [[ -n "$CONFIRM" ]] && cmd+=("$CONFIRM")
 
 printf 'Skill: %s | Agents: %s | Scope: %s | Source: %s\n' \
-  "$SKILL" "\${UNIQUE[*]}" "$SCOPE" "$SOURCE"
+  "$SKILL" "${UNIQUE[*]}" "$SCOPE" "$SOURCE"
 printf 'Command:'
-printf ' %q' "\${cmd[@]}"
+printf ' %q' "${cmd[@]}"
 printf '\n'
 
 if [[ "$DRY_RUN" == true ]]; then
@@ -94,7 +94,7 @@ case "$SOURCE" in
   *) command -v git >/dev/null 2>&1 || fail "git not found; Git is needed for repository sources";;
 esac
 
-"\${cmd[@]}"
+"${cmd[@]}"
 printf '\nInstallation command completed successfully. Verify with: npx skills list'
 [[ "$SCOPE" == global ]] && printf ' --global'
 printf '\nActivate explicitly in your agent (Codex: $i-have-adhd; Claude Code: /i-have-adhd).\n'
